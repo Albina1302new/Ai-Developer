@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 532.26 312.33">
+  <!-- Generator: Adobe Illustrator 30.2.1, SVG Export Plug-In . SVG Version: 2.1.1 Build 1)  -->
+  <defs>
+    <style>
+      .st0 {
+        font-size: 110.27px;
+      }
+
+      .st0, .st1, .st2 {
+        isolation: isolate;
+      }
+
+      .st0, .st2 {
+        fill: #231f20;
+        font-family: Noteworthy-Light, Noteworthy;
+        font-weight: 300;
+      }
+
+      .st2 {
+        font-size: 86.62px;
+      }
+
+      .st3 {
+        stroke-width: 4px;
+      }
+
+      .st3, .st4 {
+        fill: none;
+        stroke: #000;
+        stroke-miterlimit: 10;
+      }
+
+      .st4 {
+        stroke-width: 3px;
+      }
+    </style>
+  </defs>
+  <path class="st4" d="M511.39,189.5c-27.01,73.4-119.73,103.79-251.14,103.79S15.89,255.87,13.26,176.39C10.62,96.43,117.9-24.34,260.25,29.94c153.72,58.61,264.98,121.94,251.14,159.57h0Z"/>
+  <path class="st3" d="M343,118.71c2.55-7.41,13.13-8.18,24.41-3.44,11.28,4.74,18.32,14.58,15.77,21.99"/>
+  <path d="M267.11,96.71c2.49-4.96,33.77,5.42,39.29,7.01,12.84,4.13,25.53,8.7,38.13,13.51,22.03,8.43,44.27,17.42,63.51,31.35,2.01,1.6,4.06,3.22,5.63,5.3.49.75,1.06,1.65.72,2.6,0,0-.38-.14-.38-.14.13-.69-.45-1.38-.98-1.94-1.74-1.75-3.9-3.04-6.02-4.31-8.67-5.05-17.81-9.24-26.92-13.45-24.07-11.21-49.34-22.26-74.33-31.03-11.07-3.79-22.17-8.06-33.81-9.62-1.48-.05-3.63-.4-4.46.86,0,0-.38-.14-.38-.14h0Z"/>
+  <g class="st1">
+    <text class="st0" transform="translate(96.43 166.88) scale(.81 1)"><tspan x="0" y="0">AI</tspan></text>
+  </g>
+  <g class="st1">
+    <text class="st2" transform="translate(176.93 226.41) scale(.63 1)"><tspan x="0" y="0">Kodning</tspan></text>
+  </g>
+</svg>

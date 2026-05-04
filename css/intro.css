@@ -1,0 +1,47 @@
+.intro {
+  position: relative;
+
+  height: 35vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 40px 20px;
+
+  background-image: url("../images/intro.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* 🔥 фіксований фон */
+
+  color: white;
+}
+.intro::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: rgba(58, 58, 58, 0.353); /* затемнення */
+
+  z-index: 1;
+}
+.intro h3 {
+  position: relative;
+  z-index: 2;
+
+  max-width: 800px;
+
+  font-size: clamp(1.2rem, 3vw, 1.8rem);
+  text-align: center;
+  font-family:
+    bellafair display,
+    serif;
+  line-height: 1.6;
+
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+}
+@media (max-width: 768px) {
+  .intro {
+    background-attachment: scroll;
+  }
+}

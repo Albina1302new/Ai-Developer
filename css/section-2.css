@@ -1,0 +1,34 @@
+.section-2 {
+  position: relative;
+
+  height: 30vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 40px 20px;
+
+  background-image: url("../images/ai-foto.png");
+  background-size: contain;
+  background-position: bottom;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+
+  color: white;
+}
+.section-2::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: rgba(58, 58, 58, 0.353);
+
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .section-2 {
+    background-attachment: scroll;
+  }
+}

@@ -1,0 +1,86 @@
+.users-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+/* CARD */
+.user-card {
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  background: white;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.user-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* HEADER (top bar) */
+.user-card__header {
+  height: 60px;
+  background: #ef82c3;
+}
+
+/* AVATAR */
+.user-card__avatar-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: -30px;
+}
+
+.user-card__avatar {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid white;
+  object-fit: cover;
+}
+
+/* BODY */
+.user-card__body {
+  padding: 14px;
+  text-align: center;
+}
+
+.user-card__name {
+  margin: 6px 0;
+  font-size: 1rem;
+}
+
+.user-card__username {
+  font-size: 0.85rem;
+  color: #64748b;
+}
+
+.user-card__email {
+  font-size: 0.8rem;
+  color: #94a3b8;
+}
+
+.user-card__button {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 6px 10px;
+  background: #760157;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 0.8rem;
+}
+
+/* AI */
+.ai-users {
+  margin-bottom: 10px;
+  padding-left: 18px;
+}
+
+.ai-load-btn {
+  padding: 8px 12px;
+  border: none;
+  background: #e5e7eb;
+  border-radius: 8px;
+  cursor: pointer;
+}

@@ -1,0 +1,472 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>AI/Developer</title>
+
+    <link rel="icon" type="image/svg+xml" href="./images/logoM.svg" />
+
+    <link rel="stylesheet" href="./css/styles.css" />
+
+    <script type="module" src="./js/index.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo">
+        <a href="./index.html"
+          ><img src="./images/logoAiNe.svg" alt="logo"
+        /></a>
+      </div>
+
+      <nav class="nav">
+        <button class="close-menu" id="closeMenu">✕</button>
+        <a href="#task1" class="active">Slideshow</a>
+        <a href="#task2">Funktion</a>
+        <a href="#task3">Java Script</a>
+        <a href="#comparison">Comparison</a>
+        <a href="#reflection">Refleksion</a>
+      </nav>
+
+      <button class="burger" id="burgerBtn">
+        <img src="./images/menu.svg" alt="menu" class="burger-icon" />
+      </button>
+    </header>
+
+    <section class="hero">
+      <div class="hero-content">
+        <h1 class="hero-title">Undersøgelse af AI-genereret kode</h1>
+
+        <p class="hero-subtitle">
+          Analyse og sammenligning af AI vs min egen kode
+        </p>
+
+        <div class="arrow-down">
+          <img src="./images/arrow-down-thin.svg" alt="arrow" />
+        </div>
+      </div>
+
+      <div class="hero-images">
+        <img src="./images/hero7.png" class="hero-img active" />
+        <img src="./images/hero2.png" class="hero-img" />
+        <img src="./images/hero4.png" class="hero-img" />
+      </div>
+    </section>
+
+    <section class="intro" id="intro">
+      <h3>
+        Jeg sammenligner min egen kode med kode lavet af AI og reflekterer over,
+        hvordan AI kan bruges i webudvikling.
+      </h3>
+    </section>
+    <main class="container-main">
+      <!-- OPGAVE 1 -->
+      <section class="task-section" id="task1">
+        <div class="task-header">
+          <span class="task-tag">Opgave 1</span>
+          <h2>Slideshow / billedslider</h2>
+          <p>
+            Her sammenligner jeg mit eget resultat med AI-resultatet. Øverst
+            vises mine løsning og resultat, og nederst ligger AI‑løsningen.
+          </p>
+        </div>
+
+        <!-- 1. Мій код + мій результат -->
+        <div class="results-row">
+          <div class="result-card">
+            <h3>Mit resultat</h3>
+            <div class="slider-preview">
+              <div class="custom-slider">
+                <div class="slides-controls">
+                  <button
+                    class="arrow"
+                    id="prevSlide"
+                    aria-label="Forrige billede"
+                  >
+                    &#10094;
+                  </button>
+                  <div class="slides-block">
+                    <img
+                      class="slide-preview"
+                      id="prevImg"
+                      src="./images/vogue-1.jpg"
+                      alt="prev"
+                    />
+                    <img
+                      class="slide-main"
+                      id="mainImg"
+                      src="./images/vogue-3.webp"
+                      alt="main"
+                    />
+                    <img
+                      class="slide-preview"
+                      id="nextImg"
+                      src="./images/vogue-2.jpg"
+                      alt="next"
+                    />
+                  </div>
+                  <button
+                    class="arrow"
+                    id="nextSlide"
+                    aria-label="Næste billede"
+                  >
+                    &#10095;
+                  </button>
+                </div>
+                <div class="slider-indicators">
+                  <span class="indicator"></span>
+                  <span class="indicator"></span>
+                  <span class="indicator"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="task-card">
+            <h3>Min kode</h3>
+            <pre><code>&lt;section id="magasiner"&gt;
+      &lt;div class="custom-slider"&gt;
+        &lt;div class="slides-controls"&gt;
+          &lt;button id="prevSlide" class="arrow" aria-label="Forrige billede"&gt;&#10094;&lt;/button&gt;
+          &lt;div class="slides-block"&gt;
+            &lt;img class="slide-preview" id="prevImg" src="./images/vogue-1.jpg" alt="prev" /&gt;
+            &lt;img class="slide-main" id="mainImg" src="./images/vogue-3.webp" alt="main" /&gt;
+            &lt;img class="slide-preview" id="nextImg" src="./images/vogue-2.jpg" alt="next" /&gt;
+          &lt;/div&gt;
+          &lt;button id="nextSlide" class="arrow" aria-label="Næste billede"&gt;&#10095;&lt;/button&gt;
+        &lt;/div&gt;
+        &lt;div class="slider-indicators"&gt;
+          &lt;span class="indicator"&gt;&lt;/span&gt;
+          &lt;span class="indicator"&gt;&lt;/span&gt;
+          &lt;span class="indicator"&gt;&lt;/span&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/section&gt;</code></pre>
+          </div>
+        </div>
+
+        <!-- 2. AI‑prompt (один рядок на всю ширину) -->
+        <div class="prompt-row">
+          <div class="task-card full-width">
+            <h3>AI‑prompt</h3>
+            <pre><code>Create a simple slideshow for a website using HTML, CSS, and JavaScript. Show a main image, preview images on the sides, arrows for navigation, and indicators below the slider.</code></pre>
+          </div>
+        </div>
+
+        <!-- 3. AI‑код + AI‑результат -->
+        <div class="code-row">
+          <div class="task-card">
+            <h3>AI‑kode</h3>
+            <pre><code>&lt;section class="slider-section"&gt;
+      &lt;div class="slider"&gt;
+        &lt;button class="slider-btn prev"&gt;❮&lt;/button&gt;
+        &lt;img class="slider-img" src="image1.jpg" alt="Slide image" /&gt;
+        &lt;button class="slider-btn next"&gt;❯&lt;/button&gt;
+      &lt;/div&gt;
+      &lt;div class="dots"&gt;
+        &lt;span class="dot active"&gt;&lt;/span&gt;
+        &lt;span class="dot"&gt;&lt;/span&gt;
+        &lt;span class="dot"&gt;&lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/section&gt;</code></pre>
+          </div>
+          <div class="result-card">
+            <h3>AI‑resultat</h3>
+            <div class="ai-slider">
+              <button class="ai-arrow prev" type="button">❮</button>
+              <img
+                class="ai-image"
+                src="./images/vogue-3.webp"
+                alt="AI slider"
+              />
+              <button class="ai-arrow next" type="button">❯</button>
+            </div>
+            <div class="ai-dots">
+              <span class="ai-dot active"></span>
+              <span class="ai-dot"></span>
+              <span class="ai-dot"></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Sammenligning (один блок під задачею) -->
+        <div class="task-card full-width">
+          <h3>Sammenligning</h3>
+          <p>
+            I denne opgave sammenligner jeg mit eget slideshow med en
+            AI-genereret løsning. Min version viser tre billeder på samme tid,
+            hvilket giver en bedre visuel forståelse og en mere moderne
+            brugeroplevelse. AI-løsningen er mere simpel og viser kun ét billede
+            ad gangen, hvilket gør den funktionel, men mindre visuelt
+            interessant. Dette viser, at AI kan levere en grundlæggende løsning
+            hurtigt, men at min egen kode giver mere kontrol over design og
+            brugeroplevelse.
+          </p>
+        </div>
+      </section>
+      <!-- <section class="intro" id="intro">
+        <h3>
+          Jeg sammenligner min egen kode med kode lavet af AI og reflekterer
+          over, hvordan AI kan bruges i webudvikling.
+        </h3> 
+      </section> -->
+      <!-- OPGAVE 2 -->
+      <section class="task-section" id="task2">
+        <div class="task-header">
+          <span class="task-tag">Opgave 2</span>
+          <h2>Favoritter (Produktkort)</h2>
+          <p>
+            Her laver jeg en favorit‑funktion som en rigtig webshop, hvor
+            brugeren kan gemme produkter.
+          </p>
+        </div>
+
+        <!-- 1. Мій результат + мій код -->
+        <div class="results-row">
+          <div class="result-card">
+            <h3>Mit resultat</h3>
+            <p>Brugeren kan tilføje produktet til favoritter.</p>
+            <div class="product-card">
+              <div class="product-image">
+                <img src="./images/jdq179wgojwi.jpg" alt="produkt" />
+              </div>
+              <div class="product-info">
+                <h4>Libre Eau de Parfum</h4>
+                <p class="price">899 kr</p>
+                <button class="favorite-btn" data-id="1">
+                  <img
+                    src="./images/iconmonstr-favorite-9.svg"
+                    alt="favorite"
+                    class="heart-icon-btn"
+                  />
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="task-card">
+            <h3>Min kode</h3>
+            <pre><code>const favBtn = document.querySelector(".favorite-btn");
+const favCount = document.querySelector(".favorites-count");
+
+let isFavorite = false;
+let count = 0;
+
+favBtn.onclick = () => {
+  isFavorite = !isFavorite;
+  favBtn.classList.toggle("active");
+
+  count = isFavorite ? 1 : 0;
+  favCount.textContent = count;
+};</code></pre>
+          </div>
+        </div>
+
+        <!-- 2. AI‑prompt -->
+        <div class="prompt-row">
+          <div class="task-card full-width">
+            <h3>AI‑prompt</h3>
+            <pre><code>Implement a simple favorite button that increases a counter when clicked.</code></pre>
+          </div>
+        </div>
+
+        <!-- 3. AI‑код + AI‑результат -->
+        <div class="code-row">
+          <div class="task-card">
+            <h3>AI‑kode</h3>
+            <pre><code>let count = 0;
+button.onclick = () => {
+  count++;
+}</code></pre>
+          </div>
+          <div class="result-card">
+            <h3>AI‑resultat</h3>
+            <div class="product-card ai-version">
+              <div class="product-image">
+                <img src="./images/jdq179wgojwi.jpg" alt="produkt" />
+              </div>
+              <div class="product-info">
+                <h4>Libre Eau de Parfum</h4>
+                <p class="price">899 kr</p>
+                <button class="ai-heart-btn">
+                  <svg class="heart-icon" viewBox="0 0 24 24">
+                    <path
+                      d="M12 21s-6.716-4.686-10-9.5C-1.5 6.5 3 2 7 5c1.5 1 2.5 2.5 5 5 2.5-2.5 3.5-4 5-5 4-3 8.5 1.5 5 6.5C18.716 16.314 12 21 12 21z"
+                    />
+                  </svg>
+                  Favorit
+                </button>
+                <span class="ai-count">0</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Sammenligning -->
+        <div class="task-card full-width">
+          <h3>Sammenligning</h3>
+          <p>
+            I denne opgave sammenligner jeg min favoritfunktion med
+            AI-løsningen. Min løsning fungerer som i en rigtig webshop, hvor
+            brugeren kan tilføje et produkt til favoritter. AI-løsningen er
+            meget simpel og øger kun en tæller ved klik, uden at tage højde for
+            brugeroplevelse eller funktionalitet. Dette viser, at AI kan lave en
+            teknisk løsning, men min egen kode er mere realistisk og bedre
+            tilpasset en rigtig webapplikation.
+          </p>
+        </div>
+      </section>
+      <!-- <section class="intro" id="intro">
+        <h3>
+          Jeg sammenligner min egen kode med kode lavet af AI og reflekterer
+          over, hvordan AI kan bruges i webudvikling.
+        </h3> 
+      </section> -->
+      <!-- OPGAVE 3 -->
+      <section class="task-section" id="task3">
+        <div class="task-header">
+          <span class="task-tag">Opgave 3</span>
+          <h2>Brugere (JavaScript)</h2>
+          <p>
+            Jeg viser brugere som kort ved hjælp af JavaScript. AI viser en
+            simpel liste‑version.
+          </p>
+        </div>
+
+        <!-- 1. Мій результат + мій код -->
+        <div class="results-row">
+          <div class="result-card">
+            <h3>Mit resultat</h3>
+            <div id="users-container" class="users-grid"></div>
+          </div>
+          <div class="task-card">
+            <h3>Min kode</h3>
+            <pre><code>const usersContainer = document.querySelector("#users-container");
+
+const usersData = [
+  {
+    fullName: "Jens Hansen",
+    imageSrc: "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?w=200",
+    username: "jensHansen85",
+    email: "jens@example.com",
+    websiteLink: "https://tv2.dk",
+  },
+  {
+    fullName: "Maria Sørensen",
+    imageSrc: "https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg?w=200",
+    username: "mariaDesign",
+    email: "maria@example.com",
+    websiteLink: "https://tv2.dk",
+  }
+];
+
+usersData.forEach((user) => {
+  usersContainer.insertAdjacentHTML(
+    "beforeend",
+    \`&lt;div class="user-card"&gt;
+      &lt;img src="\${user.imageSrc}" alt="\${user.fullName}" /&gt;
+      &lt;h4&gt;\${user.fullName}&lt;/h4&gt;
+      &lt;p&gt;\${user.email}&lt;/p&gt;
+    &lt;/div&gt;\`
+  );
+});</code></pre>
+          </div>
+        </div>
+
+        <!-- 2. AI‑prompt -->
+        <div class="prompt-row">
+          <div class="task-card full-width">
+            <h3>AI‑prompt</h3>
+            <pre><code>Show a list of users using JavaScript and display their name and email.</code></pre>
+          </div>
+        </div>
+
+        <!-- 3. AI‑код + AI‑результат -->
+        <div class="code-row">
+          <div class="task-card">
+            <h3>AI‑kode</h3>
+            <pre><code>button.onclick = () => {};</code></pre>
+          </div>
+          <div class="result-card">
+            <h3>AI‑resultat</h3>
+            <ul class="ai-users"></ul>
+            <button class="ai-load-btn">Load users</button>
+          </div>
+        </div>
+
+        <!-- 4. Sammenligning -->
+        <div class="task-card full-width">
+          <h3>Sammenligning</h3>
+          <p>
+            I denne opgave sammenligner jeg visning af brugere lavet med min
+            egen kode og med AI. Min løsning viser brugerne som visuelle kort
+            med billeder og information, hvilket giver en bedre og mere
+            overskuelig præsentation. AI-løsningen viser kun en simpel liste
+            uden design eller struktur. Dette viser, at AI kan generere en
+            grundlæggende løsning hurtigt, men min egen kode skaber en bedre
+            brugeroplevelse og et mere professionelt design.
+          </p>
+        </div>
+      </section>
+      <section class="section-1">
+        <!-- <h3>
+          Jeg sammenligner min egen kode med kode lavet af AI og reflekterer
+          over, hvordan AI kan bruges i webudvikling.
+        </h3> -->
+      </section>
+      <section class="comparison" id="comparison">
+        <h2 class="comparison-title">Comparison</h2>
+        <p class="comparison-subtitle">
+          Når jeg sammenligner mine tre opgaver med AI-genererede løsninger, kan
+          jeg se, at AI ofte laver en hurtig og enkel kode, som er nem at komme
+          i gang med. Min egen kode er mere tilpasset mit design og mine behov,
+          fordi jeg selv har valgt struktur, indhold og visuel opbygning. I
+          slideshowet gav min løsning et mere avanceret udtryk, i
+          favorit-opgaven var min løsning mere realistisk, og i bruger-opgaven
+          gav min version en bedre visning af data. AI var god til at give
+          forslag, men mine egne løsninger gav mere kontrol og et mere
+          personligt resultat.
+        </p>
+      </section>
+      <section class="section-2">
+        <!--  <h3>
+          Jeg sammenligner min egen kode med kode lavet af AI og reflekterer
+          over, hvordan AI kan bruges i webudvikling.
+        </h3> -->
+      </section>
+      <section class="reflection" id="reflection">
+        <h2 class="reflection-title">Reflection</h2>
+        <p class="reflection-subtitle">
+          AI er god til at lave hurtige løsninger og give inspiration. Den kan
+          spare tid, men nogle gange laver den simple eller upræcise løsninger.
+          Jeg oplevede, at jeg forstod min egen kode bedre end AI‑koden, fordi
+          jeg selv har bygget den op fra bunden. AI hjælper mig, men jeg lærer
+          mest, når jeg selv skriver koden. I fremtiden kan AI være et godt
+          værktøj for udviklere, men det er vigtigt at forstå koden og ikke bare
+          kopiere den.
+        </p>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer-container">
+        <!-- <div class="footer-logo">
+          <img src="./images/logoAiNe.svg" alt="logo" />
+        </div> -->
+        <div class="footer-top">
+          <h3 class="footer-title">AI / Developer</h3>
+
+          <div class="footer-links">
+            <a href="#task1">Slideshow</a>
+            <a href="#task2">Funktion</a>
+            <a href="#task3">Java Script</a>
+            <a href="#comparison">Comparison</a>
+            <a href="#reflection">Refleksion</a>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>© 2025 AI/Developer</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+.comparison {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 64px 16px;
+}
+.comparison-title {
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  font-weight: 700;
+  color: #ffffff;
+  font-family:
+    bellafair display,
+    serif;
+}
+.comparison-subtitle {
+  text-align: start;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  color: #f0f0f0;
+  line-height: 1.6;
+  letter-spacing: 0.02em;
+}
