@@ -11,47 +11,30 @@ document.querySelectorAll(".code-wrapper").forEach((wrapper) => {
 
   const mq = window.matchMedia("(max-width: 767px)");
 
-  function initToggle() {
+  function init() {
     if (!mq.matches) return;
 
-    requestAnimationFrame(() => {
-      const fullHeight = pre.scrollHeight;
+    if (wrapper.querySelector(".toggle-btn")) return;
 
-      if (fullHeight <= 180) return;
+    const fullHeight = pre.scrollHeight;
 
-      if (wrapper.querySelector(".toggle-btn")) return;
+    if (fullHeight <= 180) return;
 
-      pre.style.maxHeight = "180px";
-      pre.style.overflow = "hidden";
-      wrapper.classList.add("collapsed");
+    const btn = document.createElement("button");
+    btn.className = "toggle-btn";
+    btn.textContent = "se mere";
 
-      const btn = document.createElement("button");
-      btn.className = "toggle-btn";
-      btn.textContent = "se mere";
+    wrapper.appendChild(btn);
 
-      wrapper.appendChild(btn);
+    let expanded = false;
 
-      let expanded = false;
+    btn.addEventListener("click", () => {
+      expanded = !expanded;
 
-      btn.addEventListener("click", () => {
-        expanded = !expanded;
-
-        if (expanded) {
-          pre.style.maxHeight = fullHeight + "px";
-          btn.textContent = "luk";
-          wrapper.classList.remove("collapsed");
-        } else {
-          pre.style.maxHeight = "180px";
-          btn.textContent = "se mere";
-          wrapper.classList.add("collapsed");
-        }
-      });
+      pre.classList.toggle("expanded", expanded);
+      btn.textContent = expanded ? "luk" : "se mere";
     });
   }
 
-  initToggle();
-
-  mq.addEventListener("change", () => {
-    location.reload();
-  });
+  init();
 });
