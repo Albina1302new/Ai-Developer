@@ -42,7 +42,7 @@
           Analyse og sammenligning af AI vs min egen kode
         </p>
 
-        <div class="arrow-down">
+        <div class="arrow-down" id="scrollDown">
           <img src="./images/arrow-down-thin.svg" alt="arrow" />
         </div>
       </div>
@@ -61,7 +61,6 @@
       </h3>
     </section>
     <main class="container-main">
-      <!-- OPGAVE 1 -->
       <section class="task-section" id="task1">
         <div class="task-header">
           <span class="task-tag">Opgave 1</span>
@@ -72,7 +71,6 @@
           </p>
         </div>
 
-        <!-- 1. Мій код + мій результат -->
         <div class="results-row">
           <div class="result-card">
             <h3>Mit resultat</h3>
@@ -124,28 +122,29 @@
           </div>
           <div class="task-card">
             <h3>Min kode</h3>
-            <pre><code>&lt;section id="magasiner"&gt;
-      &lt;div class="custom-slider"&gt;
-        &lt;div class="slides-controls"&gt;
-          &lt;button id="prevSlide" class="arrow" aria-label="Forrige billede"&gt;&#10094;&lt;/button&gt;
-          &lt;div class="slides-block"&gt;
-            &lt;img class="slide-preview" id="prevImg" src="./images/vogue-1.jpg" alt="prev" /&gt;
-            &lt;img class="slide-main" id="mainImg" src="./images/vogue-3.webp" alt="main" /&gt;
-            &lt;img class="slide-preview" id="nextImg" src="./images/vogue-2.jpg" alt="next" /&gt;
+            <div class="code-wrapper">
+              <pre class="code-block"><code>&lt;section id="magasiner"&gt;
+        &lt;div class="custom-slider"&gt;
+          &lt;div class="slides-controls"&gt;
+            &lt;button id="prevSlide" class="arrow" aria-label="Forrige billede"&gt;&#10094;&lt;/button&gt;
+            &lt;div class="slides-block"&gt;
+              &lt;img class="slide-preview" id="prevImg" src="./images/vogue-1.jpg" alt="prev" /&gt;
+              &lt;img class="slide-main" id="mainImg" src="./images/vogue-3.webp" alt="main" /&gt;
+              &lt;img class="slide-preview" id="nextImg" src="./images/vogue-2.jpg" alt="next" /&gt;
+            &lt;/div&gt;
+            &lt;button id="nextSlide" class="arrow" aria-label="Næste billede"&gt;&#10095;&lt;/button&gt;
           &lt;/div&gt;
-          &lt;button id="nextSlide" class="arrow" aria-label="Næste billede"&gt;&#10095;&lt;/button&gt;
+          &lt;div class="slider-indicators"&gt;
+            &lt;span class="indicator"&gt;&lt;/span&gt;
+            &lt;span class="indicator"&gt;&lt;/span&gt;
+            &lt;span class="indicator"&gt;&lt;/span&gt;
+          &lt;/div&gt;
         &lt;/div&gt;
-        &lt;div class="slider-indicators"&gt;
-          &lt;span class="indicator"&gt;&lt;/span&gt;
-          &lt;span class="indicator"&gt;&lt;/span&gt;
-          &lt;span class="indicator"&gt;&lt;/span&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-    &lt;/section&gt;</code></pre>
+      &lt;/section&gt;</code></pre>
+            </div>
           </div>
         </div>
 
-        <!-- 2. AI‑prompt (один рядок на всю ширину) -->
         <div class="prompt-row">
           <div class="task-card full-width">
             <h3>AI‑prompt</h3>
@@ -153,22 +152,25 @@
           </div>
         </div>
 
-        <!-- 3. AI‑код + AI‑результат -->
         <div class="code-row">
           <div class="task-card">
             <h3>AI‑kode</h3>
-            <pre><code>&lt;section class="slider-section"&gt;
-      &lt;div class="slider"&gt;
-        &lt;button class="slider-btn prev"&gt;❮&lt;/button&gt;
-        &lt;img class="slider-img" src="image1.jpg" alt="Slide image" /&gt;
-        &lt;button class="slider-btn next"&gt;❯&lt;/button&gt;
-      &lt;/div&gt;
-      &lt;div class="dots"&gt;
-        &lt;span class="dot active"&gt;&lt;/span&gt;
-        &lt;span class="dot"&gt;&lt;/span&gt;
-        &lt;span class="dot"&gt;&lt;/span&gt;
-      &lt;/div&gt;
-    &lt;/section&gt;</code></pre>
+            <div class="code-wrapper">
+              <pre
+                class="code-block"
+              ><code>&lt;section class="slider-section"&gt;
+        &lt;div class="slider"&gt;
+          &lt;button class="slider-btn prev"&gt;❮&lt;/button&gt;
+          &lt;img class="slider-img" src="image1.jpg" alt="Slide image" /&gt;
+          &lt;button class="slider-btn next"&gt;❯&lt;/button&gt;
+        &lt;/div&gt;
+        &lt;div class="dots"&gt;
+          &lt;span class="dot active"&gt;&lt;/span&gt;
+          &lt;span class="dot"&gt;&lt;/span&gt;
+          &lt;span class="dot"&gt;&lt;/span&gt;
+        &lt;/div&gt;
+      &lt;/section&gt;</code></pre>
+            </div>
           </div>
           <div class="result-card">
             <h3>AI‑resultat</h3>
@@ -189,7 +191,6 @@
           </div>
         </div>
 
-        <!-- 4. Sammenligning (один блок під задачею) -->
         <div class="task-card full-width">
           <h3>Sammenligning</h3>
           <p>
@@ -204,12 +205,7 @@
           </p>
         </div>
       </section>
-      <!-- <section class="intro" id="intro">
-        <h3>
-          Jeg sammenligner min egen kode med kode lavet af AI og reflekterer
-          over, hvordan AI kan bruges i webudvikling.
-        </h3> 
-      </section> -->
+
       <!-- OPGAVE 2 -->
       <section class="task-section" id="task2">
         <div class="task-header">
@@ -221,7 +217,6 @@
           </p>
         </div>
 
-        <!-- 1. Мій результат + мій код -->
         <div class="results-row">
           <div class="result-card">
             <h3>Mit resultat</h3>
@@ -245,23 +240,26 @@
           </div>
           <div class="task-card">
             <h3>Min kode</h3>
-            <pre><code>const favBtn = document.querySelector(".favorite-btn");
-const favCount = document.querySelector(".favorites-count");
-
-let isFavorite = false;
-let count = 0;
-
-favBtn.onclick = () => {
-  isFavorite = !isFavorite;
-  favBtn.classList.toggle("active");
-
-  count = isFavorite ? 1 : 0;
-  favCount.textContent = count;
-};</code></pre>
+            <div class="code-wrapper">
+              <pre
+                class="code-block"
+              ><code>const favBtn = document.querySelector(".favorite-btn");
+  const favCount = document.querySelector(".favorites-count");
+  
+  let isFavorite = false;
+  let count = 0;
+  
+  favBtn.onclick = () => {
+    isFavorite = !isFavorite;
+    favBtn.classList.toggle("active");
+  
+    count = isFavorite ? 1 : 0;
+    favCount.textContent = count;
+  };</code></pre>
+            </div>
           </div>
         </div>
 
-        <!-- 2. AI‑prompt -->
         <div class="prompt-row">
           <div class="task-card full-width">
             <h3>AI‑prompt</h3>
@@ -269,7 +267,6 @@ favBtn.onclick = () => {
           </div>
         </div>
 
-        <!-- 3. AI‑код + AI‑результат -->
         <div class="code-row">
           <div class="task-card">
             <h3>AI‑kode</h3>
@@ -301,7 +298,6 @@ button.onclick = () => {
           </div>
         </div>
 
-        <!-- 4. Sammenligning -->
         <div class="task-card full-width">
           <h3>Sammenligning</h3>
           <p>
@@ -315,12 +311,7 @@ button.onclick = () => {
           </p>
         </div>
       </section>
-      <!-- <section class="intro" id="intro">
-        <h3>
-          Jeg sammenligner min egen kode med kode lavet af AI og reflekterer
-          over, hvordan AI kan bruges i webudvikling.
-        </h3> 
-      </section> -->
+
       <!-- OPGAVE 3 -->
       <section class="task-section" id="task3">
         <div class="task-header">
@@ -332,7 +323,6 @@ button.onclick = () => {
           </p>
         </div>
 
-        <!-- 1. Мій результат + мій код -->
         <div class="results-row">
           <div class="result-card">
             <h3>Mit resultat</h3>
@@ -340,39 +330,42 @@ button.onclick = () => {
           </div>
           <div class="task-card">
             <h3>Min kode</h3>
-            <pre><code>const usersContainer = document.querySelector("#users-container");
-
-const usersData = [
-  {
-    fullName: "Jens Hansen",
-    imageSrc: "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?w=200",
-    username: "jensHansen85",
-    email: "jens@example.com",
-    websiteLink: "https://tv2.dk",
-  },
-  {
-    fullName: "Maria Sørensen",
-    imageSrc: "https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg?w=200",
-    username: "mariaDesign",
-    email: "maria@example.com",
-    websiteLink: "https://tv2.dk",
-  }
-];
-
-usersData.forEach((user) => {
-  usersContainer.insertAdjacentHTML(
-    "beforeend",
-    \`&lt;div class="user-card"&gt;
-      &lt;img src="\${user.imageSrc}" alt="\${user.fullName}" /&gt;
-      &lt;h4&gt;\${user.fullName}&lt;/h4&gt;
-      &lt;p&gt;\${user.email}&lt;/p&gt;
-    &lt;/div&gt;\`
-  );
-});</code></pre>
+            <div class="code-wrapper">
+              <pre
+                class="code-block"
+              ><code>const usersContainer = document.querySelector("#users-container");
+  
+  const usersData = [
+    {
+      fullName: "Jens Hansen",
+      imageSrc: "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?w=200",
+      username: "jensHansen85",
+      email: "jens@example.com",
+      websiteLink: "https://tv2.dk",
+    },
+    {
+      fullName: "Maria Sørensen",
+      imageSrc: "https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg?w=200",
+      username: "mariaDesign",
+      email: "maria@example.com",
+      websiteLink: "https://tv2.dk",
+    }
+  ];
+  
+  usersData.forEach((user) => {
+    usersContainer.insertAdjacentHTML(
+      "beforeend",
+      \`&lt;div class="user-card"&gt;
+        &lt;img src="\${user.imageSrc}" alt="\${user.fullName}" /&gt;
+        &lt;h4&gt;\${user.fullName}&lt;/h4&gt;
+        &lt;p&gt;\${user.email}&lt;/p&gt;
+      &lt;/div&gt;\`
+    );
+  });</code></pre>
+            </div>
           </div>
         </div>
 
-        <!-- 2. AI‑prompt -->
         <div class="prompt-row">
           <div class="task-card full-width">
             <h3>AI‑prompt</h3>
@@ -380,7 +373,6 @@ usersData.forEach((user) => {
           </div>
         </div>
 
-        <!-- 3. AI‑код + AI‑результат -->
         <div class="code-row">
           <div class="task-card">
             <h3>AI‑kode</h3>
@@ -393,7 +385,6 @@ usersData.forEach((user) => {
           </div>
         </div>
 
-        <!-- 4. Sammenligning -->
         <div class="task-card full-width">
           <h3>Sammenligning</h3>
           <p>
@@ -407,12 +398,7 @@ usersData.forEach((user) => {
           </p>
         </div>
       </section>
-      <section class="section-1">
-        <!-- <h3>
-          Jeg sammenligner min egen kode med kode lavet af AI og reflekterer
-          over, hvordan AI kan bruges i webudvikling.
-        </h3> -->
-      </section>
+      <section class="section-1"></section>
       <section class="comparison" id="comparison">
         <h2 class="comparison-title">Comparison</h2>
         <p class="comparison-subtitle">
@@ -427,12 +413,7 @@ usersData.forEach((user) => {
           personligt resultat.
         </p>
       </section>
-      <section class="section-2">
-        <!--  <h3>
-          Jeg sammenligner min egen kode med kode lavet af AI og reflekterer
-          over, hvordan AI kan bruges i webudvikling.
-        </h3> -->
-      </section>
+      <section class="section-2"></section>
       <section class="reflection" id="reflection">
         <h2 class="reflection-title">Reflection</h2>
         <p class="reflection-subtitle">
@@ -448,9 +429,6 @@ usersData.forEach((user) => {
     </main>
     <footer class="footer">
       <div class="footer-container">
-        <!-- <div class="footer-logo">
-          <img src="./images/logoAiNe.svg" alt="logo" />
-        </div> -->
         <div class="footer-top">
           <h3 class="footer-title">
             <a href="./index.html">AI / Developer</a>
