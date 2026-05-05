@@ -263,6 +263,17 @@
     background: linear-gradient(transparent, #1d0057e2);
     pointer-events: none;
   }
+  .toggle-btn {
+    display: inline-block;
+    margin-top: 8px;
+    background: #1c1c1df3;
+    color: #ffffff;
+    padding: 6px 12px;
+    border-radius: 999px;
+    font-weight: 700;
+    font-size: 0.82rem;
+    cursor: pointer;
+  }
 }
 
 /* ===== DESKTOP ===== */
