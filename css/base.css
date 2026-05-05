@@ -4,35 +4,29 @@
 * {
   box-sizing: border-box;
 }
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  color: #000000;
 
+  background: linear-gradient(135deg, #e08bd4, #93c4ff);
+  background-attachment: fixed;
+  overflow-x: hidden;
+}
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.25);
+  pointer-events: none;
+}
 a {
   text-decoration: none;
-}
-.container-main {
-  max-width: 1400px;
-
-  margin: 0 auto;
-  padding: 20px;
 }
 
 html {
   scroll-behavior: smooth;
-}
-body {
-  background: linear-gradient(95deg, #c4d9f9 0%, #f7acea 100%);
-  /* background-color: #f6b8deb4; */
-  font-family: "Poppins", sans-serif;
-  color: #333;
-  margin: 0;
-  padding: 0;
-}
-body {
-  overflow-x: hidden;
-}
-
-.task-card,
-.result-card {
-  min-width: 0;
 }
 
 pre {
@@ -45,8 +39,70 @@ code {
   word-break: break-word;
 }
 
-.results-row,
-.code-row {
-  width: 100%;
-  max-width: 100%;
+.hero,
+.task-section {
+  z-index: 1;
+}
+.container-main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 24px;
+}
+
+.comparison,
+.reflection {
+  margin: 80px auto;
+  padding: 60px 40px;
+  max-width: 900px;
+
+  background: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(14px);
+
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+}
+.comparison h2,
+.reflection h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+
+  background: linear-gradient(135deg, #ffffff, #dbeafe);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.comparison p,
+.reflection p {
+  line-height: 1.8;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+.section-1,
+.section-2 {
+  margin: 80px 0;
+}
+.comparison::before,
+.reflection::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: radial-gradient(
+    circle at top left,
+    rgba(255, 255, 255, 0.1),
+    transparent 60%
+  );
+  border-radius: 24px;
+
+  pointer-events: none;
+}
+.comparison,
+.reflection {
+  position: relative;
+  overflow: hidden;
+}
+.comparison p,
+.reflection p {
+  max-width: 700px;
 }
