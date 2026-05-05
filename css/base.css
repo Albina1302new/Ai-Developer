@@ -29,6 +29,11 @@ html {
   scroll-behavior: smooth;
 }
 
+.container-main {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 60px 24px;
+}
 pre {
   max-width: 100%;
   overflow-x: auto;
@@ -42,11 +47,6 @@ code {
 .hero,
 .task-section {
   z-index: 1;
-}
-.container-main {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 60px 24px;
 }
 
 .comparison,
