@@ -96,40 +96,6 @@
   }
 }
 
-/* 📱 MOBILE */
-@media (max-width: 550px) {
-  .hero {
-    /* grid-template-columns: 1fr 1fr; */
-    display: flex;
-    flex-direction: column-reverse;
-    padding: 20px 10px;
-    text-align: center;
-    /* height: auto; */
-  }
-
-  .hero-images {
-    height: 400px;
-    margin-top: 20px;
-  }
-
-  .hero-img {
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  .hero-img.active {
-    transform: translateX(-50%) translateY(0);
-  }
-
-  .hero-content {
-    max-width: 100%;
-  }
-  .arrow-down {
-    /* display: none; */
-    height: 80px;
-    margin-left: 25px;
-  }
-}
 @media (max-width: 768px) {
   .hero {
     grid-template-columns: 1fr 1fr;
@@ -140,7 +106,7 @@
   }
 
   .hero-images {
-    height: 600px;
+    height: 400px;
     /*  margin-top: 20px; */
   }
 
