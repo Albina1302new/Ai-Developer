@@ -48,9 +48,9 @@
       </div>
 
       <div class="hero-images">
-        <img src="./images/hero7.png" class="hero-img active" />
-        <img src="./images/hero2.png" class="hero-img" />
-        <img src="./images/hero4.png" class="hero-img" />
+        <img rel="preload" src="./images/hero7.png" class="hero-img active" />
+        <img src="./images/hero2.png" class="hero-img" loading="lazy" />
+        <img src="./images/hero4.png" class="hero-img" loading="lazy" />
       </div>
     </section>
 
@@ -90,18 +90,21 @@
                       id="prevImg"
                       src="./images/vogue-1.jpg"
                       alt="prev"
+                      loading="lazy"
                     />
                     <img
                       class="slide-main"
                       id="mainImg"
                       src="./images/vogue-3.webp"
                       alt="main"
+                      loading="lazy"
                     />
                     <img
                       class="slide-preview"
                       id="nextImg"
                       src="./images/vogue-2.jpg"
                       alt="next"
+                      loading="lazy"
                     />
                   </div>
                   <button

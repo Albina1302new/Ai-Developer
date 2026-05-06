@@ -1,4 +1,3 @@
-// MIT RESULT
 const usersContainer = document.querySelector("#users-container");
 
 const usersData = [
@@ -36,34 +35,52 @@ const usersData = [
   },
 ];
 
-usersData.forEach(({ fullName, imageSrc, username, email, websiteLink }) => {
-  usersContainer.insertAdjacentHTML(
-    "beforeend",
-    `
-    <div class="user-card">
-      <div class="user-card__header"></div>
-      <div class="user-card__avatar-wrapper">
-        <img class="user-card__avatar" src="${imageSrc}" alt="${fullName}">
+// 🔹 рендер одним разом (без лагів)
+function renderUsers() {
+  const markup = usersData
+    .map(
+      ({ fullName, imageSrc, username, email, websiteLink }) => `
+      <div class="user-card">
+        <div class="user-card__header"></div>
+
+        <div class="user-card__avatar-wrapper">
+          <img 
+            class="user-card__avatar"
+            src="${imageSrc}"
+            alt="${fullName}"
+            loading="lazy"
+            width="200"
+            height="200"
+          >
+        </div>
+
+        <div class="user-card__body">
+          <h2 class="user-card__name">${fullName}</h2>
+          <p class="user-card__username">@${username}</p>
+          <p class="user-card__email">${email}</p>
+          <a 
+            class="user-card__button" 
+            href="${websiteLink}" 
+            target="_blank" 
+            rel="noopener noreferrer"
+          >
+            See website
+          </a>
+        </div>
       </div>
-      <div class="user-card__body">
-        <h2 class="user-card__name">${fullName}</h2>
-        <p class="user-card__username">@${username}</p>
-        <p class="user-card__email">${email}</p>
-        <a class="user-card__button" href="${websiteLink}">See website</a>
-      </div>
-    </div>
     `,
-  );
+    )
+    .join("");
+
+  usersContainer.innerHTML = markup;
+}
+
+// 🔹 рендер тільки коли видно (оптимізація)
+const observer = new IntersectionObserver((entries, obs) => {
+  if (entries[0].isIntersecting) {
+    renderUsers();
+    obs.disconnect();
+  }
 });
 
-// AI RESULT
-const aiBtn = document.querySelector(".ai-load-btn");
-const aiList = document.querySelector(".ai-users");
-
-aiBtn.onclick = () => {
-  usersData.forEach((user) => {
-    const li = document.createElement("li");
-    li.textContent = user.fullName;
-    aiList.appendChild(li);
-  });
-};
+observer.observe(usersContainer);
