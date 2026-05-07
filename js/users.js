@@ -15,7 +15,7 @@ const usersData = [
       "https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg?w=200",
     username: "mariaDesign",
     email: "maria@example.com",
-    websiteLink: "https://tv2.dk",
+    websiteLink: "https://github.com/Albina1302new/",
   },
   {
     fullName: "Lars Nielsen",
@@ -31,7 +31,7 @@ const usersData = [
       "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?w=200&fit=crop&crop=face",
     username: "emmaUX",
     email: "emma@example.com",
-    websiteLink: "https://tv2.dk",
+    websiteLink: "https://github.com/Albina1302new/",
   },
 ];
 

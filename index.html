@@ -328,34 +328,34 @@ button.onclick = () => {
               <pre
                 class="code-block"
               ><code>const usersContainer = document.querySelector("#users-container");
-  
-  const usersData = [
-    {
-      fullName: "Jens Hansen",
-      imageSrc: "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?w=200",
-      username: "jensHansen85",
-      email: "jens@example.com",
-      websiteLink: "https://tv2.dk",
-    },
-    {
-      fullName: "Maria Sørensen",
-      imageSrc: "https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg?w=200",
-      username: "mariaDesign",
-      email: "maria@example.com",
-      websiteLink: "https://tv2.dk",
-    }
-  ];
-  
-  usersData.forEach((user) => {
-    usersContainer.insertAdjacentHTML(
-      "beforeend",
-      \`&lt;div class="user-card"&gt;
-        &lt;img src="\${user.imageSrc}" alt="\${user.fullName}" /&gt;
-        &lt;h4&gt;\${user.fullName}&lt;/h4&gt;
-        &lt;p&gt;\${user.email}&lt;/p&gt;
-      &lt;/div&gt;\`
-    );
-  });</code></pre>
+
+const usersData = [
+  {
+    fullName: "Jens Hansen",
+    imageSrc: "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?w=200",
+    username: "jensHansen85",
+    email: "jens@example.com",
+    websiteLink: "https://github.com/Albina1302new/",
+  },
+  {
+    fullName: "Maria Sørensen",
+    imageSrc: "https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg?w=200",
+    username: "mariaDesign",
+    email: "maria@example.com",
+    websiteLink: "https://github.com/Albina1302new/",
+  }
+];
+
+usersData.forEach((user) => {
+  usersContainer.insertAdjacentHTML(
+    "beforeend",
+    \`&lt;div class="user-card"&gt;
+      &lt;img src="\${user.imageSrc}" alt="\${user.fullName}" /&gt;
+      &lt;h4&gt;\${user.fullName}&lt;/h4&gt;
+      &lt;p&gt;\${user.email}&lt;/p&gt;
+    &lt;/div&gt;\`
+  );
+});</code></pre>
             </div>
           </div>
         </div>
