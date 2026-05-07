@@ -1,21 +1,25 @@
 const images = document.querySelectorAll(".hero-img");
-let index = 0;
 
-setInterval(() => {
-  images[index].classList.remove("active");
+if (images.length > 0) {
+  let index = 0;
 
-  index = (index + 1) % images.length;
-
-  images[index].classList.add("active");
-}, 3000);
-
+  setInterval(() => {
+    images[index].classList.remove("active");
+    index = (index + 1) % images.length;
+    images[index].classList.add("active");
+  }, 3000);
+}
 const scrollBtn = document.querySelector("#scrollDown");
 
-scrollBtn?.addEventListener("click", () => {
-  const intro = document.querySelector("#intro");
+if (scrollBtn) {
+  scrollBtn.addEventListener("click", () => {
+    const intro = document.querySelector("#intro");
 
-  intro?.scrollIntoView({
-    behavior: "smooth",
-    block: "start",
+    if (intro) {
+      intro.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
   });
-});
+}

@@ -13,11 +13,6 @@
   transition: 0.3s;
 }
 
-.user-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-}
-
 /* HEADER (top bar) */
 .user-card__header {
   height: 60px;
@@ -83,4 +78,8 @@
   background: #e5e7eb;
   border-radius: 8px;
   cursor: pointer;
+}
+.user-card {
+  transform: translateZ(0);
+  will-change: transform;
 }

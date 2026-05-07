@@ -158,10 +158,8 @@
         <div class="code-row">
           <div class="task-card">
             <h3>AI‑kode</h3>
-            <div class="code-wrapper">
-              <pre
-                class="code-block"
-              ><code>&lt;section class="slider-section"&gt;
+            <div>
+              <pre><code>&lt;section class="slider-section"&gt;
         &lt;div class="slider"&gt;
           &lt;button class="slider-btn prev"&gt;❮&lt;/button&gt;
           &lt;img class="slider-img" src="image1.jpg" alt="Slide image" /&gt;
@@ -264,10 +262,12 @@ favBtn.addEventListener("click", function () {
         <div class="code-row">
           <div class="task-card">
             <h3>AI‑kode</h3>
-            <pre><code>let count = 0;
-button.onclick = () => {
-  count++;
-}</code></pre>
+            <pre><code> let aiCounter = 0;
+
+  aiBtn.addEventListener("click", () => {
+    aiCounter++;
+    aiCount.textContent = aiCounter;
+  });</code></pre>
           </div>
           <div class="result-card">
             <h3>AI‑resultat</h3>

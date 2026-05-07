@@ -60,12 +60,13 @@ usersData.forEach(({ fullName, imageSrc, username, email, websiteLink }) => {
   );
 });
 const aiUsers = document.querySelector(".ai-users");
-const aiBtn = document.querySelector(".ai-load-btn");
+const aiBtn2 = document.querySelector(".ai-load-btn");
 
-const users = ["Jens Hansen", "Maria Sørensen", "Lars Nielsen"];
-
-aiBtn.addEventListener("click", function () {
-  users.forEach(function (user) {
-    aiUsers.innerHTML += `<li>${user}</li>`;
+if (aiUsers && aiBtn2) {
+  aiBtn2.addEventListener("click", () => {
+    aiUsers.innerHTML = "";
+    users.forEach((user) => {
+      aiUsers.innerHTML += `<li>${user}</li>`;
+    });
   });
-});
+}

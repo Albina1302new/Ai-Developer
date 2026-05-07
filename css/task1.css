@@ -53,7 +53,7 @@
   border-radius: 18px;
 
   padding: 28px;
-  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.05);
+
   backdrop-filter: blur(10px);
   min-width: 0;
 }

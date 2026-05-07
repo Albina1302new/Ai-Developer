@@ -5,20 +5,17 @@ import "./hero.js";
 import "./menu.js";
 
 // ===== SHOW MORE CODE (mobile only, fixed) =====
-document.querySelectorAll(".code-wrapper").forEach((wrapper) => {
-  const pre = wrapper.querySelector("pre");
-  if (!pre) return;
-
+function initCodeToggle() {
+  const wrappers = document.querySelectorAll(".code-wrapper");
   const mq = window.matchMedia("(max-width: 767px)");
 
-  function init() {
-    if (!mq.matches) return;
+  if (!mq.matches) return;
+
+  wrappers.forEach((wrapper) => {
+    const pre = wrapper.querySelector("pre");
+    if (!pre) return;
 
     if (wrapper.querySelector(".toggle-btn")) return;
-
-    const fullHeight = pre.scrollHeight;
-
-    if (fullHeight <= 180) return;
 
     const btn = document.createElement("button");
     btn.className = "toggle-btn";
@@ -30,11 +27,17 @@ document.querySelectorAll(".code-wrapper").forEach((wrapper) => {
 
     btn.addEventListener("click", () => {
       expanded = !expanded;
-
       pre.classList.toggle("expanded", expanded);
       btn.textContent = expanded ? "luk" : "se mere";
     });
-  }
+  });
+}
 
-  init();
+// чекаємо DOM
+window.addEventListener("DOMContentLoaded", () => {
+  if ("requestIdleCallback" in window) {
+    requestIdleCallback(initCodeToggle);
+  } else {
+    setTimeout(initCodeToggle, 200);
+  }
 });
