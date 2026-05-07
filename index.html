@@ -243,22 +243,13 @@
           </div>
           <div class="task-card">
             <h3>Min kode</h3>
-            <div class="code-wrapper">
-              <pre
-                class="code-block"
-              ><code>const favBtn = document.querySelector(".favorite-btn");
-  const favCount = document.querySelector(".favorites-count");
-  
-  let isFavorite = false;
-  let count = 0;
-  
-  favBtn.onclick = () => {
-    isFavorite = !isFavorite;
-    favBtn.classList.toggle("active");
-  
-    count = isFavorite ? 1 : 0;
-    favCount.textContent = count;
-  };</code></pre>
+            <div>
+              <pre><code>
+  const favBtn = document.querySelector(".favorite-btn");
+
+favBtn.addEventListener("click", function () {
+  favBtn.classList.toggle("active");
+});</code></pre>
             </div>
           </div>
         </div>
